@@ -6,7 +6,7 @@
     --primary-color: #2B2D3E; /* Example primary blue */
     --secondary-color: #F6F6F6; /* Example gray */
     --accent-color: #F2982A;
-    --body-font: "Josefin Sans", sans-serif;
+    --body-font: "Josefin Sans", sans-serif; 
     --heading-font:  "Frank Ruhl Libre", serif;
 }
 
@@ -48,7 +48,6 @@ a {
 }
 
 /* Typography styles */
-
 h1 {
     font-size: 2.25rem;
     margin-bottom:2rem;
@@ -60,11 +59,14 @@ h2 {
     margin-bottom: 1.5rem;
     font-family: var(--heading-font);
 }
+
 h3 {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
+    font-weight: 400;
     font-family: var(--heading-font);
 }
+
  h4 {
     font-size: 1rem;
     margin-bottom: 0.5rem;    
@@ -106,7 +108,11 @@ button:hover {
 
 /* Media queries for responsiveness */
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
+    header nav ul {
+        display: none;
+    }
+
     header nav ul li {
         margin: 0;
     }
@@ -123,7 +129,7 @@ button:hover {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    height: 75vh;
+    min-height: 75vh;
     justify-content: space-between;
 }
 
@@ -135,6 +141,7 @@ button:hover {
 
 .hero-section-left-side{
     width: 35rem;
+    margin-bottom: 20px;
 }
 
 .hero-section-image{
@@ -142,4 +149,88 @@ button:hover {
     max-width: 319px;
     border: 2px solid var(--primary-color);
     border-radius: 20px;
+}
+
+.humburger-button{
+    width: 50px;
+    height: 50px;
+    border: 2px solid var(--primary-color);
+    border-radius: 50%;
+    margin-right: 20px;
+    display: none;
+
+}
+
+.project-catalogue{
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.project{
+    border-radius: 20px;
+    background-color: var(--primary-color);
+}
+
+.project-image {
+    height: 252px;
+    width: 100%;
+    object-fit: cover;
+    border: var(--primary-color) 2px solid;
+    border-radius: 20px;
+    
+}
+
+.project-details{ 
+    color: var(--secondary-color);
+    
+    padding: 20px;
+}
+
+.project-details h4{
+    font-weight: 400;
+    font-size: 1.2rem;
+    font-family: var(--heading-font);
+}
+
+.project-details p{
+    font-weight: 400;
+    font-size: 0.8rem;
+    font-family: var(--body-font);
+}
+
+
+
+/* testing grid on test.html*/
+
+/* 
+.grid-col-span-3{ 
+    grid-column: span 3;
+} */
+
+.grid-col-span-2 {
+    grid-column: span 2;
+}
+.grid-row-span-2{
+    grid-row: span 2;
+}
+.header{
+    margin: 30px;
+    padding: 10px;
+    background-color: #333;
+    color: #F6F6F6;
+}
+
+.items{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.item{
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 1rem;
+    text-align: center; 
 }
