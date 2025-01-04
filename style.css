@@ -10,6 +10,10 @@
     --heading-font:  "Frank Ruhl Libre", serif;
 }
 
+/* 
+   For heading font use weight 300 to 900 and
+   For body font use weight 100 to 700 
+*/ 
 
 * {
     margin: 0;
@@ -22,7 +26,7 @@ body {
     background-color: var(--secondary-color);
     color: var(--primary-color);
     font-family: var(--body-font);
-    font-weight: normal;
+    font-weight: 400;
     line-height: 1.5;
 }
 
@@ -36,11 +40,9 @@ header nav ul {
     display: flex;
     list-style: none;
     align-items: center;
+    gap: 20px;
 }
 
-header nav ul li {
-    margin: 0 0.5rem;
-}
 
 a {
     text-decoration: none;
@@ -49,26 +51,27 @@ a {
 
 /* Typography styles */
 h1 {
-    font-size: 2.25rem;
+    font-size: 2.5rem;
+    font-weight: 500;
     margin-bottom:2rem;
     font-family: var(--heading-font);
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: 2.25rem;
     margin-bottom: 1.5rem;
     font-family: var(--heading-font);
 }
 
 h3 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
     font-weight: 400;
     font-family: var(--heading-font);
 }
 
  h4 {
-    font-size: 1rem;
+    font-size: 1.25rem;
     margin-bottom: 0.5rem;    
     font-family: var(--heading-font);
 }
@@ -86,7 +89,7 @@ h6 {
 }
 
 p {
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.5rem;
     font-size: 1rem;
     font-family: var(--body-font);
 }
@@ -119,11 +122,36 @@ button:hover {
 }
 
 /* Custom CSS for this specific page */
+
+
+.logo-container{
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
 .logo {
     font-family: var(--body-font);
-    font-weight: normal;
-    font-size: 1.3rem;
+    font-weight: 500;
+    font-size: 1.5rem;
+    padding-right: 10px; 
+    margin-right: 10px;
+    margin-bottom: 0;
+    border-right: #2B2D3E 1px solid;
+    justify-content: center;
+    align-items: center;
 }
+
+.logo-details{
+    font-family: var(--body-font);
+    font-weight: 300;
+    line-height: 1.2;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.25rem;
+}
+
 .hero-section{
 
     display: flex;
@@ -133,6 +161,7 @@ button:hover {
     justify-content: space-between;
 }
 
+
 .hero-section-span {
     color: var(--accent-color);
     font-family: var(--body-font);
@@ -140,10 +169,14 @@ button:hover {
 }
 
 .hero-section-left-side{
-    width: 35rem;
+    width: 40rem;
     margin-bottom: 20px;
 }
 
+.hero-section-p{
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
 .hero-section-image{
     max-height: 452px;
     max-width: 319px;
@@ -166,15 +199,17 @@ button:hover {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 60px;
+    margin-bottom: 3rem;
 }
 
 .project{
+    height:560px;
     border-radius: 20px;
     background-color: var(--primary-color);
 }
 
 .project-image {
-    height: 252px;
+    height: 414px;
     width: 100%;
     object-fit: cover;
     border: var(--primary-color) 2px solid;
@@ -200,7 +235,19 @@ button:hover {
     font-family: var(--body-font);
 }
 
+.services-catalogue{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px
+}
 
+.services{
+    border-radius: 20px;
+    border: 2px solid var(--primary-color);
+    padding: 1.25rem;
+    
+    
+}
 
 /* testing grid on test.html*/
 
@@ -211,6 +258,15 @@ button:hover {
 
 .grid-col-span-2 {
     grid-column: span 2;
+}
+
+.height-medium{
+    height: 473px;
+    
+}
+
+.grid-col-span-2-image{
+    height: 313px;
 }
 .grid-row-span-2{
     grid-row: span 2;
