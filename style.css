@@ -30,6 +30,10 @@ body {
     line-height: 1.5;
 }
 
+section{
+    margin: 1.8rem 0 ;
+}
+
 header nav {
     display: flex;
     justify-content: space-between;
@@ -41,6 +45,10 @@ header nav ul {
     list-style: none;
     align-items: center;
     gap: 20px;
+}
+
+ul {
+    list-style: none;
 }
 
 
@@ -72,19 +80,22 @@ h3 {
 
  h4 {
     font-size: 1.25rem;
-    margin-bottom: 0.5rem;    
+    margin-bottom: 0.5rem; 
+    font-weight: 400;   
     font-family: var(--heading-font);
 }
 
 h5 {
     font-size: 0.8rem;
     margin-bottom: 0.5rem;
+    font-weight: 400;
     font-family: var(--heading-font);
 }
 
 h6 {
     font-size: 0.6rem;
     margin-bottom: 0.5rem;
+    font-weight: 400;
     font-family: var(--heading-font);
 }
 
@@ -107,6 +118,12 @@ button {
 
 button:hover {
     background-color: var(--secondary-color);
+}
+img {
+    object-fit: cover;
+    border-radius: 20px;
+    border: var(--primary-color) 2px solid;
+    width: 100%;
 }
 
 /* Media queries for responsiveness */
@@ -208,13 +225,9 @@ button:hover {
     background-color: var(--primary-color);
 }
 
+
 .project-image {
     height: 414px;
-    width: 100%;
-    object-fit: cover;
-    border: var(--primary-color) 2px solid;
-    border-radius: 20px;
-    
 }
 
 .project-details{ 
@@ -289,4 +302,76 @@ button:hover {
     color: var(--secondary-color);
     padding: 1rem;
     text-align: center; 
+}
+
+.marker-highlight {
+    position: relative;
+    margin-left: 20px;
+    margin-top: 20px;
+    width: fit-content;
+}
+  
+  .marker-highlight::after {
+    content: "";
+    position: absolute;
+    top: 30px; /* Offset to compensate for margin-top */
+    left: 20px; /* Offset to compensate for margin-left */
+    height: 65%;
+    width: 100%;
+    background-color: var(--accent-color);
+    z-index: -1;
+    transform: skewX(-15deg);
+  }
+
+  .contact-image{
+    height: 315px;
+    width: 545px;
+    margin-bottom: 1.25rem;
+}
+
+.contact-links{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 1.25rem;
+    width: 191px;
+}
+
+.discovery-call{
+    margin: 5rem 0;
+    padding: 20px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    border-bottom: var(--primary-color) 20px solid;
+    background-color: var(--accent-color);
+}
+
+
+.button-alternative{
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: var();
+}
+/* utility class */
+
+.flex {
+    display: flex;
+    gap: 20px;
+}
+.min-content {
+    width: min-content;
+}
+
+.meta-text{
+
+    font-weight: 300;
+    margin-bottom: 1.25rem
+}
+
+.meta-heading{
+    margin-bottom: 5px;
 }
