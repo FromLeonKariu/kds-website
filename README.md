@@ -27,4 +27,4 @@ This repository contains the source code for the KD Studios website, a creative 
 
 1. **Clone the repository:**
    ```bash
-   git clone <repository_url>
+   git clone <[repository_url](https://github.com/FromLeonKariu/kds-website)>
