@@ -6,6 +6,7 @@
     --primary-color: #2B2D3E; /* Example primary blue */
     --secondary-color: #F6F6F6; /* Example gray */
     --accent-color: #F2982A;
+    --link-color: #333;
     --body-font: "Josefin Sans", sans-serif; 
     --heading-font:  "Frank Ruhl Libre", serif;
 }
@@ -54,7 +55,8 @@ ul {
 
 a {
     text-decoration: none;
-    color: #333;
+    /* color: #333; */
+    color: var(--link-color);
 }
 
 /* Typography styles */
@@ -126,21 +128,20 @@ img {
     width: 100%;
 }
 
-/* Media queries for responsiveness */
-
-@media screen and (max-width: 800px) {
-    header nav ul {
-        display: none;
-    }
-
-    header nav ul li {
-        margin: 0;
-    }
-}
-
 /* Custom CSS for this specific page */
 
+.dark-mode {
 
+/* 
+    work on the dark mode design on figma then convert it here to css after picking a color scheme for the background and text colors  */
+
+
+    --primary-color: #f6f6f6;
+    --secondary-color: #202123;
+    --link-color:#cacaca;
+    --accent-color: #F2982A;
+    
+}
 .logo-container{
     display: flex;
     
@@ -155,7 +156,7 @@ img {
     padding-right: 10px; 
     margin-right: 10px;
     margin-bottom: 0;
-    border-right: #2B2D3E 1px solid;
+    border-right: var(--primary-color) 1px solid;
     justify-content: center;
     align-items: center;
 }
@@ -220,7 +221,7 @@ img {
 }
 
 .project{
-    height:560px;
+    min-height:560px;
     border-radius: 20px;
     background-color: var(--primary-color);
 }
@@ -274,7 +275,7 @@ img {
 }
 
 .height-medium{
-    height: 473px;
+    min-height: 473px;
     
 }
 
@@ -374,4 +375,54 @@ img {
 
 .meta-heading{
     margin-bottom: 5px;
+}
+
+
+/* Media queries for responsiveness */
+
+@media screen and (max-width: 800px) {
+    header nav ul {
+        display: none;
+    }
+
+    header nav ul li {
+        margin: 0;
+    }
+
+    body{
+        margin: 3rem;
+    }
+
+    h1{
+        font-size: 2rem;
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
+    h3 {
+        font-size: 1.25rem;
+    }
+    h4 {
+        font-size: 1rem;
+    }
+    h5 {
+        font-size: 0.8rem;
+    }
+    h6 {
+        font-size: 0.6rem;
+    }
+
+    p { 
+        font-size: 1rem;
+    }
+
+    .hero-section-p {
+        font-size:1rem;
+    }
+    .project-catalogue, .services-catalogue{
+        gap:20px
+    }
+    .contact-image {
+        width: 400px;
+    }
 }
