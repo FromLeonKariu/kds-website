@@ -380,7 +380,7 @@ img {
 
 /* Media queries for responsiveness */
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 500px) {
     header nav ul {
         display: none;
     }
@@ -390,7 +390,7 @@ img {
     }
 
     body{
-        margin: 3rem;
+        margin: 3rem 2rem;
     }
 
     h1{
@@ -419,10 +419,22 @@ img {
     .hero-section-p {
         font-size:1rem;
     }
+
+    .project {
+        min-height: auto;
+    }
     .project-catalogue, .services-catalogue{
-        gap:20px
+        gap:20px;
+        display: flex;
+        flex-direction: column;
     }
     .contact-image {
-        width: 400px;
+        width: 250px;
+    }
+    .project-image{
+        height: 250px;
+    }
+    .flex {
+        flex-direction: column;
     }
 }
